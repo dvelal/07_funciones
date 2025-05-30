@@ -1,13 +1,15 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 void resta(int val1, int val2);
 void cociente(int val1, int val2);
+void potencia(double val1, double val2);
 int producto(int val1, int val2);
 int suma(int val1, int val2);
 
 int main() {
-    float num1, num2, resultado, resultado2;
+    int num1, num2, resultado, resultado2;
     cout<<"ingrese el primer numero: "; cin>>num1;
     cout<<"ingrese el segundo numero: "; cin>>num2;
 
@@ -24,6 +26,9 @@ int main() {
     resultado2 = suma(num1,num2);
 
     cout<<"\nLa suma de "<<num1<<" mas "<<num2<<" es: "<<resultado2;
+
+    potencia(num1,num2);
+    potencia(num2,num1);
     return 0;
 }
 
@@ -59,3 +64,10 @@ void cociente(int val1, int val2){
     cout<<"\nLa divicion de "<<val1<<" / "<<val2<<" es: "<<"indeterminado";
     ;
 }
+
+//funcion potencia
+void potencia(double val1, double val2){
+    double potencia;
+    potencia = pow(val1, val2);
+    cout<<"\nLa potencia de "<<val1<<" ^ "<<val2<<" es: "<<potencia;
+    }
