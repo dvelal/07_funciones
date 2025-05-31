@@ -1,24 +1,26 @@
 #include <iostream>
 using namespace std;
 
-int Perfecto(int n){
-	int c=0;
-	for(int i=1; i<n; i++){
-		if(n%i==0){
-			c = c+i;
+void Perfecto(int num1, int num2){
+	for(int i=num1; i<=num2; i++){
+		int c=0;
+		for(int j=1; j<i; j++){
+			if (i%j==0){
+				c = c+j;
+			}
 		}
+		if (c==i)
+			cout<<i<<endl;
 	}
-	return c;
 }
 
 int main() {
-	int num, perfecto;
-	cout<<"Ingrese un numero: ";
-	cin>>num;
-	perfecto = Perfecto(num);
-	if (perfecto==num)
-		cout<<num<<" es un numero perfecto";
-	else
-		cout<<num<<" no es un numero perfecto";
+	int izq, der;
+	cout<<"Ingrese el numero izquierdo del intervalo: ";
+	cin>>izq;
+	cout<<"Ingrese el numero derecho del intervalo: ";
+	cin>>der;
+	cout<<"\nLos numero enteros perfectos en el intervalo ["<<izq<<";"<<der<<"] son: "<<endl;
+	Perfecto(izq, der);
 	return 0;
 }
