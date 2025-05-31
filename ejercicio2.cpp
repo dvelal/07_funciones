@@ -7,7 +7,7 @@ int main() {
     int a, b;
     cout<<"Ingresa dos numeros enteros positivos: ";
     cin>>a>>b;
-    //Verificación básica de que sean positivos
+    //Verificacion basica de que sean positivos
     if (a>0 && b>0) {
         divisionPorRestas(a, b);
     } else {
@@ -18,7 +18,7 @@ int main() {
 
 void divisionPorRestas(int num1, int num2) {
     int mayor, menor;
-    //Determinar cuál es el mayor y cual el menor
+    //Determinar cual es el mayor y cual el menor
     if (num1 > num2) {
         mayor = num1;
         menor = num2;
@@ -26,6 +26,9 @@ void divisionPorRestas(int num1, int num2) {
         mayor = num2;
         menor = num1;
     }
+    //Mostramos cual es cual
+    cout<<"\nMayor: "<<mayor<<endl;
+    cout<<"Menor: "<<menor<<endl;
     int cociente = 0;
     int resto = mayor;
     //Restas sucesivas
