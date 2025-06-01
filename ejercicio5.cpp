@@ -12,8 +12,10 @@ int sumaDivisores(int val){
 
 int main() {
 	int num1, num2, ax, bx;
-	cout<<"Ingrese los numeros a determinar si son amigos: ";
-	cin>>num1>>num2;
+	do {
+		cout<<"Ingrese los numeros positivos a determinar si son amigos: ";
+		cin>>num1>>num2;
+	} while (num1<=0 || num2<=0);
 	ax = sumaDivisores(num1);
 	bx = sumaDivisores(num2);
 	if (ax==num2 && bx==num1)
