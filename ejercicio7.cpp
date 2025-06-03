@@ -12,6 +12,13 @@ int main() {
     cout << "Ingrese el valor de n: ";
     cin >> n;
 
+    
+    // Validacion
+    if (n > m || m < 0 || n < 0) {
+        cout << "Valores invalidos. Asegurese de que 0 <= n <= m." << endl;
+        return 1;
+    }
+
     // Calculos
     factorial_m = factorial(m);
     factorial_n = factorial(n);
